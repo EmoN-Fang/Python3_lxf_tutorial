@@ -4,7 +4,7 @@ scores = [95, 75, 85]
 
 #用dict实现，dict的支持，dict全称dictionary，在其他语言中也称为map，使用键-值（key-value）存储，具有极快的查找速度。
 d = {'Michael': 95, 'Bob': 75, 'Tracy': 85}
-print(d['Michael'])
+print(d['Michael'])  #95
 
 #多次对一个key放入value，后面的值会把前面的冲掉：
 d['Jack'] = 90
@@ -16,7 +16,7 @@ print(d['Jack']) #88
 
 print("Thomas" in d)  # False
 print(d.get('Thomas')) # None
-print(d.get('Thomas', -1))  #-1
+print(d.get('Thomas', -1))  #自定义一个value来返回，这里是-1
 
 #要删除一个key，用pop(key)方法，对应的value也会从dict中删除：
 print(d.pop('Bob'))   #75
@@ -88,5 +88,10 @@ bb = (1, [2, 3])
 
 s = set(aa)
 print(s)  #{1, 2, 3}  aa不可修改所以出现了
-g = set(bb)
-print(g)  #没出现任何东西
+# g = set(bb)
+# print(g)  #bb里包含list，可变对象不能作为dict或者set
+
+cc = {(1,2)}
+print(cc)  #{(1,2)}
+# dd = {(1,2,[3])}
+# print(dd)  #错误，因为可变对象不能作为dict
