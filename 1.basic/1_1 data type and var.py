@@ -25,9 +25,9 @@ line3''')       #line1
                     #line3   (use '''...''' to write things in several lines)
 
 #Boolen
-print(not True or False)
-print(5 > 3 or 1 > 3)
-print(not 1 > 2)
+print(not True or False)  #False
+print(5 > 3 or 1 > 3)   #True
+print(not 1 > 2)    #True
 
 #Python是动态语言
 a = 13
