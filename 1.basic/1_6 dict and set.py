@@ -14,9 +14,9 @@ print(d['Jack']) #88
 
 #print(d['Thomas']) #不存在 会报error
 
-print("Thomas" in d)  # False
-print(d.get('Thomas')) # None
-print(d.get('Thomas', -1))  #自定义一个value来返回，这里是-1
+print("Thomas" in d)  # False 这个是判断Thomas是否存在于d里
+print(d.get('Thomas')) # None   key不存在的话，去拿值会得到None
+print(d.get('Thomas', -1))  #如果没有定义返回值的话，自定义一个value来返回，这里是-1
 
 #要删除一个key，用pop(key)方法，对应的value也会从dict中删除：
 print(d.pop('Bob'))   #75
@@ -66,6 +66,7 @@ s2 = set([2, 3, 4])
 print(s1 & s2)   #{2, 3}
 print(s1 | s2)   #{1, 2, 3, 4}
 
+###可变对象与不可变对象###
 #str是不变对象，而list是可变对象
 #对于可变对象，比如list，对list进行操作，list内部的内容是会变化的，比如：
 a = ['c', 'b', 'a']
@@ -95,3 +96,15 @@ cc = {(1,2)}
 print(cc)  #{(1,2)}
 # dd = {(1,2,[3])}
 # print(dd)  #错误，因为可变对象不能作为dict
+
+
+resource = ['a', 'a', 'b', 'a', 'b', 'c']
+dic = {}
+for element in resource:
+    result = dic.get(element, -1)
+    if -1 == result:
+        dic[element] = 1
+    else:
+        dic[element] = dic[element] + 1
+
+print(dic)   #{'a': 3, 'b': 2, 'c': 1}

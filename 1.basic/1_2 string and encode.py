@@ -24,6 +24,7 @@ print(chr(25991)) #文
 print( '\u4e2d\u6587')  #中文
 
 #用b前缀的单引号或双引号表示byte类型
+print('ABC'.encode('utf-8')) #b'ABC'
 print('ABC'.encode('ascii')) #b'ABC'
 print('中文'.encode('utf-8')) #b'\xe4\xb8\xad\xe6\x96\x87'  对于无法显示为ASCII的字节，用\x##显示
 #print('中文'.encode('ascii')) 无法decode 会报错。
@@ -42,7 +43,8 @@ print('Hi, %s, you have $%d.' % ('Michael', 1000000)) #'Hi, Michael, you have $1
 #%d	整数
 #%f	浮点数
 #%s	字符串
-#%x	十六进制整数
+#%x	十六进制整数1
+print('growth rate: %d %%' % 7)   #用 %% 来表示 %
 
 #决定是否补0以及整数和小数的位数
 print('%2d-%02d' % (3e8, 10))

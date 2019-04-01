@@ -23,7 +23,7 @@ if x:
 
 #input()返回数据默认为str，无法与整数比较，需先转成整数
 s = input('birth: ')
-birth = int(s)
+birth = int(s)    #要先转换成int
 if birth < 2000:
     print('00前')
 else:

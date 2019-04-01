@@ -36,6 +36,8 @@ tuple:()    tuple和list非常类似，但是tuple一旦初始化就不能修改
 '''
 t = (1, 2)
 print(t)   #(1,2)
+# t[1] = 3  #TypeError: 'tuple' object does not support item assignment
+print('t[1]=',t[1])
 t = ()
 print(t)   #()
 t = (1)
